@@ -1,7 +1,44 @@
 # LogikaiLada
-Marek Bendegúz & Sajtos Timudzsin
+
+Marek Bendegúz \& Sajtos Timudzsin
 
 
-3 ládából kell választani, melyikben van a kincs, van 1-1 felirat rajtuk, csak az egyik igaz. Arany: "Én rejtem a kincset", Ezüst: "Nem én rejtem", Bronz: "Arany hazudik"
 
-Az ezüstben van a megoldás.
+Három ládából kell kiválasztani, hogy melyikben van a kincs.
+
+Mind a 3-on van egy felirat, és tudjuk, hogy csak 1 igaz.
+
+
+
+Arany: "én rejtem a kincset"
+
+Ezüst: "nem én rejtem a kincset"
+
+Bronz: "az arany hazudik"
+
+
+
+Megoldás: az ezüstben van a kincs.
+
+
+
+Arany: hazudik
+
+Ezüst: hazudik
+
+Bronz: igazat mond
+
+
+
+ALAP TERV:
+
+Van 3 gomb, és a játékleírás. Ha a felhasználó a megfelelő gombra kattint, akkor kiírja, hogy nyer-e vagy nem, és miért.
+
+
+
+TOVÁBBFEJLESZTÉS:
+
+
+
+
+
