@@ -4,6 +4,16 @@ Marek Bendegúz \& Sajtos Timudzsin
 
 
 
+Elosztás kb:
+
+Modell: Bendegúz
+
+View: Timudzsin
+
+Controller: mindketten
+
+
+
 Három ládából kell kiválasztani, hogy melyikben van a kincs.
 
 Mind a 3-on van egy felirat, és tudjuk, hogy csak 1 igaz.
