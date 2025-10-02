@@ -32,7 +32,7 @@ Bronz: igazat mond
 
 ALAP TERV:
 
-!\[alternatív szöveg](view.png)
+<img width="551" height="227" alt="view" src="https://github.com/user-attachments/assets/d2debfa8-acd0-4b7d-b91f-48abbd250e21" />
 
 Van 3 gomb, és a játékleírás. Ha a felhasználó a megfelelő gombra kattint, akkor kiírja, hogy nyer-e vagy nem, és miért.
 
