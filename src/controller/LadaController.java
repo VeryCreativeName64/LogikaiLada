@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
-/**
- *
- * @author marek.b.kristof
- */
+import modell.LadaModell;
+import view.LadaView;
+
 public class LadaController {
+    private LadaModell modell;
+    private LadaView nezet;
+    
+    public LadaController(LadaModell modell, LadaView nezet) {
+        this.modell = modell;
+        this.nezet = nezet;
+        //nezet.setVisible(true);
+    }
+    
+    public void feladat() {
+        System.out.println("asd");
+    }
     
 }
