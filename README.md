@@ -32,6 +32,8 @@ Bronz: igazat mond
 
 ALAP TERV:
 
+!\[alternatív szöveg](view.png)
+
 Van 3 gomb, és a játékleírás. Ha a felhasználó a megfelelő gombra kattint, akkor kiírja, hogy nyer-e vagy nem, és miért.
 
 
