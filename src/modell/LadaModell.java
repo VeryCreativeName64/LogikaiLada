@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modell;
 
-/**
- *
- * @author marek.b.kristof
- */
+
 public class LadaModell {
+    private String anyag;
+    private boolean bennevan;
+
+    public LadaModell(String anyag, boolean bennevan) {
+        this.anyag = anyag;
+        if(!"arany".equals(anyag)||!"ezüst".equals(anyag)||!"bronz".equals(anyag)){
+            throw new IllegalArgumentException("Csak arany, ezüst, vagy bronz lehet!");
+        }
+        this.bennevan = bennevan;
+    }
+
+    public String getAnyag() {
+        return anyag;
+    }
+
+    public boolean isBennevan() {
+        return bennevan;
+    }
+    
+    
+
+    
+
+    
     
 }
