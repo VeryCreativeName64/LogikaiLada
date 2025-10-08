@@ -24,7 +24,8 @@ Mind a hármon van egy felirat, és tudjuk, hogy csak 1 igaz.
 🥉Bronz: igazat mond
 
 ## Alap terv:
-<img width="551" height="227" alt="view" src="https://github.com/user-attachments/assets/d2debfa8-acd0-4b7d-b91f-48abbd250e21" />
+<img width="569" height="313" alt="Képernyőkép 2025-10-08 150305" src="https://github.com/user-attachments/assets/eac8b9db-94fe-48b0-bc8d-89d32cce7cff" />
+
 
 Van 3 gomb, a játékleírás, és egy label. Ha a felhasználó a megfelelő gombra kattint, akkor kiírja, hogy nyer-e vagy nem, és miért.
 
