@@ -1,10 +1,10 @@
 # LogikaiLada
-Marek Bendegúz \& Sajtos Timudzsin
+Marek Bendegúz \& Sajtos Timudzsin + Dezső Vince (mivel ő nem volt múlt héten, és most bevettük)
 
 Elosztás kb:
 Modell: Bendegúz
 View: Timudzsin
-Controller: mindketten
+Controller: mindhárman
 
 Három ládából kell kiválasztani, hogy melyikben van a kincs.
 Mind a 3-on van egy felirat, és tudjuk, hogy csak 1 igaz.
