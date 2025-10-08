@@ -7,9 +7,6 @@ public class LadaModell {
 
     public LadaModell(String anyag, boolean bennevan) {
         this.anyag = anyag;
-        if(!"arany".equals(anyag)||!"ezüst".equals(anyag)||!"bronz".equals(anyag)){
-            throw new IllegalArgumentException("Csak arany, ezüst, vagy bronz lehet!");
-        }
         this.bennevan = bennevan;
     }
 

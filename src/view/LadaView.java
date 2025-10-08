@@ -38,7 +38,7 @@ public class LadaView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Rejtvény "));
 
         jLabel1.setText("<html>Melyik ládában van a kincs? <br>\nCsak az egyik mond igazat.</html>");
 
@@ -86,7 +86,7 @@ public class LadaView extends javax.swing.JFrame {
                     .addContainerGap()))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Válasz"));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
