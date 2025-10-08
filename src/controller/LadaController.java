@@ -4,13 +4,11 @@ import modell.LadaModell;
 import view.LadaView;
 
 public class LadaController {
-    private LadaModell modell;
-    private LadaView nezet;
-    
-    public LadaController(LadaModell modell, LadaView nezet) {
-        this.modell = modell;
-        this.nezet = nezet;
-        //nezet.setVisible(true);
+    public LadaController() {
+        LadaModell ladaModel1 = new LadaModell("arany", false);
+        LadaModell ladaModel2 = new LadaModell("ezüst", true);
+        LadaModell ladaModel3 = new LadaModell("bronz", false);
+        this.feladat();
     }
     
     public void feladat() {
