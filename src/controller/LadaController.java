@@ -7,10 +7,8 @@ public class LadaController {
     private LadaModell modell;
     private LadaView nezet;
     
-    public LadaController(LadaModell modell, LadaView nezet) {
-        this.modell = modell;
-        this.nezet = nezet;
-        //nezet.setVisible(true);
+    public LadaController() {
+
     }
     
     public void feladat() {
