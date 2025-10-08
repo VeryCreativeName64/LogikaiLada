@@ -3,7 +3,7 @@
 ## 👥Készítette
 Marek Bendegúz  
 Sajtos Timudzsin  
-Dezső Vince (mivel ő nem volt múlt héten, és most bevettük)
+Dezső Vince (mivel ő nem volt múlt héten, így most bevettük)
 
 Elosztás:  
 Modell: Bendegúz  
