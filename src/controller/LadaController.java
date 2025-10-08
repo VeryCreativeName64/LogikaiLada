@@ -9,6 +9,6 @@ public class LadaController {
         LadaModell ladaModel2 = new LadaModell("ezüst", true);
         LadaModell ladaModel3 = new LadaModell("bronz", false);
         LadaView view = new LadaView();
+        view.setVisible(true);
     }
-    
 }
