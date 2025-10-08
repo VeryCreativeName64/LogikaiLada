@@ -8,11 +8,7 @@ public class LadaController {
         LadaModell ladaModel1 = new LadaModell("arany", false);
         LadaModell ladaModel2 = new LadaModell("ezüst", true);
         LadaModell ladaModel3 = new LadaModell("bronz", false);
-        this.feladat();
-    }
-    
-    public void feladat() {
-        
+        LadaView view = new LadaView();
     }
     
 }
