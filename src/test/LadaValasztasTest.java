@@ -59,15 +59,15 @@ public class LadaValasztasTest {
     
     private static void testVezerloGyozelemVisszajelzes() {
         //by Vince
-        System.out.println("teszteset: minden ládán van felirat");
+        System.out.println("teszteset: van pontosan 3 láda, csak az egyikben van kincs");
     
-        assert false: "Nincs minden kádán felirat.";
+        assert false: "";
     }
     
     private static void testVezerloLadaSzamSzovegFelcserelve() {
         //by Vince
-        System.out.println("teszteset: a feliratok szövegébe aranynál \"én rejtem\", ezüstnél \"nem én rejtem\", bronznál \"arany hazudik\" szövegrészek megtalálhatóak");
+        System.out.println("teszteset: ha nem létező ládára hivatkozunk, azt hogyan kezeli a program?");
     
-        assert false: "Nem megfelelőek a ládák szövegei.";
+        assert false: "";
     }
 }
