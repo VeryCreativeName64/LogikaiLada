@@ -108,7 +108,6 @@ public class LadaValasztasTest {
     private static void testVezerloLadaSzamSzovegFelcserelve() {
         //by Vince
         System.out.println("teszteset: ládára való hivatkozásnál mi történik, ha szöveget adunk meg a szám helyett (v fordítva)");
-    
         assert false: "";
     }
 }
