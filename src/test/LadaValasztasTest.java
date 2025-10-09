@@ -14,9 +14,25 @@ public class LadaValasztasTest {
         testLadaVezerloMegfeleloVisszajelzes();
     }
 
-    private static void testModellMindenLadanVanFelirat() {
+    private static void testModellFelirat() {
         //by Timudzsin
+        System.out.println("teszteset: minden ládán van felirat");
+    
+        assert false: "Nincs minden kádán felirat.";
+    }
+    
+    private static void testModellSzoveg() {
+        //by Timudzsin
+        System.out.println("teszteset: a feliratok szövegébe aranynál \"én rejtem\", ezüstnél \"nem én rejtem\", bronznál \"arany hazudik\" szövegrészek megtalálhatóak");
+    
+        assert false: "Nem megfelelőek a ládák szövegei.";
+    }
+    
+    private static void testModellLada() {
+        //by Timudzsin
+        System.out.println("teszteset: van pontosan 3 láda, csak az egyikben van kincs");
         
+        assert false: "Nem pontosan 3 láda van, vagy nem csak az egyikben van kincs.";
     }
     
     private static void testLadaVezerloMegfeleloVisszajelzes() {
