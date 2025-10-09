@@ -2,6 +2,7 @@
 package test;
 
 import controller.LadaController;
+import modell.LadaModell;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -61,11 +62,8 @@ public class LadaValasztasTest {
         LadaController controller = new LadaController();
         LadaView view = new LadaView();
         
-        JButton bronzGomb = view.getButtonBronz();
-        for (ActionListener al : bronzGomb.getActionListeners()) {
-            al.actionPerformed(new ActionEvent(bronzGomb, ActionEvent.ACTION_PERFORMED, ""));
-        }
         
+        view.getButtonBronz().doClick();
         
         String vart = "Gratulálunk, ebben a ládában van!";
         JLabel kapott = view.getValaszlbl();
@@ -75,5 +73,26 @@ public class LadaValasztasTest {
         System.out.println("Várt: " + vart);
         System.out.println("Kapott: " + kapott);
         assert vart.equals(kapott.toString()) : "Hiba! A visszajelzés nem megfelelő.";
+    }
+    
+//    private String eredmeny(LadaModell modell){
+//        String vissza = "Gratulálok, eltaláltad!";
+//        vissza = modell.isBennevan() ? vissza : "Sajnos nem talált";
+//        return vissza;
+//    }
+    
+    
+    private static void testVezerloGyozelemVisszajelzes() {
+        //by Vince
+        System.out.println("teszteset: a visszajelzés szövege megfelelő (Gratulálunk..., Sajnos  nem nyert...)");
+    
+        assert false: "";
+    }
+    
+    private static void testVezerloLadaSzamSzovegFelcserelve() {
+        //by Vince
+        System.out.println("teszteset: ládára való hivatkozásnál mi történik, ha szöveget adunk meg a szám helyett (v fordítva)");
+    
+        assert false: "";
     }
 }
