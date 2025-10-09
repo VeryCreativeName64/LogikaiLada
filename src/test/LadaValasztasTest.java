@@ -7,6 +7,11 @@ public class LadaValasztasTest {
         testLadaVezerloMegfeleloVisszajelzes();
     }
 
+    private static void testModellMindenLadanVanFelirat() {
+        //by Timudzsin
+        
+    }
+    
     private static void testLadaVezerloMegfeleloVisszajelzes() {
         //by Marek Bendegúz
         
