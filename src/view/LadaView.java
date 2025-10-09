@@ -7,6 +7,8 @@ public class LadaView extends javax.swing.JFrame {
         initComponents();
     }
 
+    private JButton btnUjJatek;
+
     public JButton getButtonArany(){
         return btnArany;
     }
@@ -21,6 +23,38 @@ public class LadaView extends javax.swing.JFrame {
     
     public void setValasz(String valasz){
         valaszlbl.setText(valasz);
+    }
+
+    public void torolValasz(){
+        valaszlbl.setText("");
+    }
+
+    public void setGombokEngedelyezve(boolean engedelyezve){
+        btnArany.setEnabled(engedelyezve);
+        btnEzust.setEnabled(engedelyezve);
+        btnBronz.setEnabled(engedelyezve);
+    }
+
+    public void ujJatekGombMegjelenit(java.awt.event.ActionListener esemenyKezelo){
+        if(btnUjJatek == null){
+            btnUjJatek = new JButton("Új játék");
+        }else{
+            for(java.awt.event.ActionListener al : btnUjJatek.getActionListeners()){
+                btnUjJatek.removeActionListener(al);
+            }
+        }
+        btnUjJatek.addActionListener(esemenyKezelo);
+        jPanel2.add(btnUjJatek);
+        jPanel2.revalidate();
+        jPanel2.repaint();
+    }
+
+    public void ujJatekGombElrejt(){
+        if(btnUjJatek != null){
+            jPanel2.remove(btnUjJatek);
+            jPanel2.revalidate();
+            jPanel2.repaint();
+        }
     }
     
     @SuppressWarnings("unchecked")
@@ -45,11 +79,6 @@ public class LadaView extends javax.swing.JFrame {
         btnArany.setText("<html>Arany <br><br>\n-Én rejtem a kincset</html>");
 
         btnEzust.setText("<html>Ezüst <br><br>\n-Nem én rejtem a kincset.</html>");
-        btnEzust.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEzustActionPerformed(evt);
-            }
-        });
 
         btnBronz.setText("<html>Bronz <br><br>\n-Az arany hazudik.</html>");
 
@@ -73,16 +102,16 @@ public class LadaView extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 206, Short.MAX_VALUE)
+            .addGap(0, 214, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnArany)
-                        .addComponent(btnEzust)
-                        .addComponent(btnBronz, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnArany, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                        .addComponent(btnEzust, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                        .addComponent(btnBronz, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                     .addContainerGap()))
         );
 
@@ -100,7 +129,7 @@ public class LadaView extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(valaszlbl, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                .addComponent(valaszlbl, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -128,10 +157,6 @@ public class LadaView extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnEzustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEzustActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEzustActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArany;
