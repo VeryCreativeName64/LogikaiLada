@@ -12,47 +12,30 @@ import view.LadaView;
 
 public class LadaValasztasTest {
     public static void main(String[] args) {
-        testModell3Lada1Kincs();
-        testModellNemLetezoLada();
         testLadaVezerloMegfeleloVisszajelzes();
     }
 
-    private static void testModell3Lada1Kincs() {
-        LadaModell[] ladak = new LadaModell[]{
-            new LadaModell("arany", false),
-            new LadaModell("ezüst", false),
-            new LadaModell("bronz", true)
-        };
-
-        System.out.println("Teszt: pontosan 3 láda és egy kincs");
-        assert ladak.length == 3 : "Hiba! Nincs pontosan 3 láda.";
-
-        int kincsDb = 0;
-        for (LadaModell lada : ladak) {
-            if (lada.isBennevan()) {
-                kincsDb++;
-            }
-        }
-        assert kincsDb == 1 : "Hiba! Nem pontosan egy ládában van a kincs.";
+    private static void testModellFelirat() {
+        //by Timudzsin
+        System.out.println("teszteset: minden ládán van felirat");
+    
+        assert false: "Nincs minden kádán felirat.";
     }
-
-    private static void testModellNemLetezoLada() {
-        LadaModell[] ladak = new LadaModell[]{
-            new LadaModell("arany", false),
-            new LadaModell("ezüst", false),
-            new LadaModell("bronz", true)
-        };
-        System.out.println("Teszt: nem létező ládára hivatkozás kezelése");
-        boolean kivetelTortent = false;
-        try {
-            LadaModell nemLetezo = ladak[3]; // index: 0..2 létezik, 3 nem
-            System.out.println(nemLetezo);
-        } catch (ArrayIndexOutOfBoundsException ex) {
-            kivetelTortent = true;
-        }
-        assert kivetelTortent : "Hiba! Nem kezeltük a nem létező ládára hivatkozást (kivétel várt).";
+    
+    private static void testModellSzoveg() {
+        //by Timudzsin
+        System.out.println("teszteset: a feliratok szövegébe aranynál \"én rejtem\", ezüstnél \"nem én rejtem\", bronznál \"arany hazudik\" szövegrészek megtalálhatóak");
+    
+        assert false: "Nem megfelelőek a ládák szövegei.";
     }
-
+    
+    private static void testModellLada() {
+        //by Timudzsin
+        System.out.println("teszteset: van pontosan 3 láda, csak az egyikben van kincs");
+        
+        assert false: "Nem pontosan 3 láda van, vagy nem csak az egyikben van kincs.";
+    }
+    
     private static void testLadaVezerloMegfeleloVisszajelzes() {
         //by Marek Bendegúz
         LadaController controller = new LadaController();
@@ -72,5 +55,19 @@ public class LadaValasztasTest {
         System.out.println("Várt: " + vart);
         System.out.println("Kapott: " + kapott);
         assert vart.equals(kapott.toString()) : "Hiba! A visszajelzés nem megfelelő.";
+    }
+    
+    private static void testVezerloGyozelemVisszajelzes() {
+        //by Vince
+        System.out.println("teszteset: minden ládán van felirat");
+    
+        assert false: "Nincs minden kádán felirat.";
+    }
+    
+    private static void testVezerloLadaSzamSzovegFelcserelve() {
+        //by Vince
+        System.out.println("teszteset: a feliratok szövegébe aranynál \"én rejtem\", ezüstnél \"nem én rejtem\", bronznál \"arany hazudik\" szövegrészek megtalálhatóak");
+    
+        assert false: "Nem megfelelőek a ládák szövegei.";
     }
 }
