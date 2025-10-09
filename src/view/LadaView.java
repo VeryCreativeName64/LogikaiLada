@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class LadaView extends javax.swing.JFrame {
     public LadaView() {
@@ -19,6 +20,10 @@ public class LadaView extends javax.swing.JFrame {
         
     public JButton getButtonBronz(){
         return btnBronz;
+    }
+
+    public JLabel getValaszlbl() {
+        return valaszlbl;
     }
     
     public void setValasz(String valasz){
