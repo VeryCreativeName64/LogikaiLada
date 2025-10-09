@@ -7,6 +7,11 @@ import modell.LadaModell;
 import view.LadaView;
 
 public class LadaController {
+    private LadaModell ladaModellArany;
+    private LadaModell ladaModellEzust;
+    private LadaModell ladaModellBronz;
+    private LadaView nezet;
+
     public LadaController() {
         LadaModell ladaModel1 = new LadaModell("arany", false);
         LadaModell ladaModel2 = new LadaModell("ezüst", true);
