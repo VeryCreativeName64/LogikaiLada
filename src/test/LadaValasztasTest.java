@@ -12,7 +12,8 @@ import view.LadaView;
 
 public class LadaValasztasTest {
     public static void main(String[] args) {
-        testLadaVezerloMegfeleloVisszajelzes();
+        //testLadaVezerloMegfeleloVisszajelzes();
+        testVezerloGyozelemVisszajelzes();
     }
 
     private static void testModellFelirat() {
@@ -60,8 +61,22 @@ public class LadaValasztasTest {
     private static void testVezerloGyozelemVisszajelzes() {
         //by Vince
         System.out.println("teszteset: a visszajelzés szövege megfelelő (Gratulálunk..., Sajnos  nem nyert...)");
-    
-        assert false: "";
+        LadaView view = new LadaView();
+        view.setVisible(true);
+        view.getButtonBronz().addActionListener(e -> view.setValasz("Gratulálunk, ebben a ládában van!"));
+        view.getButtonArany().addActionListener(e -> view.setValasz("Nem ebben a ládában van!"));
+        view.getButtonEzust().addActionListener(e -> view.setValasz("Nem ebben a ládában van!"));
+        JButton bronz = view.getButtonBronz();
+        bronz.doClick();
+        assert "Gratulálunk, ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás nyerő üzenet.";
+        view.torolValasz();
+        JButton arany = view.getButtonArany();
+        arany.doClick();
+        assert "Nem ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (arany).";
+        view.torolValasz();
+        JButton ezust = view.getButtonEzust();
+        ezust.doClick();
+        assert "Nem ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (ezüst).";
     }
     
     private static void testVezerloLadaSzamSzovegFelcserelve() {
