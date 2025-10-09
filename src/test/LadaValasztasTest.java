@@ -41,11 +41,8 @@ public class LadaValasztasTest {
         LadaController controller = new LadaController();
         LadaView view = new LadaView();
         
-        JButton bronzGomb = view.getButtonBronz();
-        for (ActionListener al : bronzGomb.getActionListeners()) {
-            al.actionPerformed(new ActionEvent(bronzGomb, ActionEvent.ACTION_PERFORMED, ""));
-        }
         
+        view.getButtonBronz().doClick();
         
         String vart = "Gratulálunk, ebben a ládában van!";
         JLabel kapott = view.getValaszlbl();
@@ -56,6 +53,13 @@ public class LadaValasztasTest {
         System.out.println("Kapott: " + kapott);
         assert vart.equals(kapott.toString()) : "Hiba! A visszajelzés nem megfelelő.";
     }
+    
+//    private String eredmeny(LadaModell modell){
+//        String vissza = "Gratulálok, eltaláltad!";
+//        vissza = modell.isBennevan() ? vissza : "Sajnos nem talált";
+//        return vissza;
+//    }
+    
     
     private static void testVezerloGyozelemVisszajelzes() {
         //by Vince
