@@ -59,14 +59,14 @@ public class LadaValasztasTest {
     
     private static void testVezerloGyozelemVisszajelzes() {
         //by Vince
-        System.out.println("teszteset: van pontosan 3 láda, csak az egyikben van kincs");
+        System.out.println("teszteset: a visszajelzés szövege megfelelő (Gratulálunk..., Sajnos  nem nyert...)");
     
         assert false: "";
     }
     
     private static void testVezerloLadaSzamSzovegFelcserelve() {
         //by Vince
-        System.out.println("teszteset: ha nem létező ládára hivatkozunk, azt hogyan kezeli a program?");
+        System.out.println("teszteset: ládára való hivatkozásnál mi történik, ha szöveget adunk meg a szám helyett (v fordítva)");
     
         assert false: "";
     }
