@@ -9,8 +9,8 @@ import view.LadaView;
 public class LadaController {
     public LadaController() {
         LadaModell ladaModel1 = new LadaModell("arany", false);
-        LadaModell ladaModel2 = new LadaModell("ezüst", true);
-        LadaModell ladaModel3 = new LadaModell("bronz", false);
+        LadaModell ladaModel2 = new LadaModell("ezüst", false);
+        LadaModell ladaModel3 = new LadaModell("bronz", true);
         LadaView view = new LadaView();
         view.setVisible(true);
         
