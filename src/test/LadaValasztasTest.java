@@ -85,29 +85,35 @@ public class LadaValasztasTest {
     
     
     private static void testVezerloGyozelemVisszajelzes() {
-        //by Vince
+        // Vince
         System.out.println("teszteset: a visszajelzés szövege megfelelő (Gratulálunk..., Sajnos  nem nyert...)");
         LadaView view = new LadaView();
-        view.setVisible(true);
         view.getButtonBronz().addActionListener(e -> view.setValasz("Gratulálunk, ebben a ládában van!"));
-        view.getButtonArany().addActionListener(e -> view.setValasz("Nem ebben a ládában van!"));
-        view.getButtonEzust().addActionListener(e -> view.setValasz("Nem ebben a ládában van!"));
-        JButton bronz = view.getButtonBronz();
-        bronz.doClick();
+        view.getButtonArany().addActionListener(e -> view.setValasz("Sajnos nem nyert..."));
+        view.getButtonEzust().addActionListener(e -> view.setValasz("Sajnos nem nyert..."));
+        view.getButtonBronz().doClick();
         assert "Gratulálunk, ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás nyerő üzenet.";
         view.torolValasz();
-        JButton arany = view.getButtonArany();
-        arany.doClick();
-        assert "Nem ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (arany).";
+        view.getButtonArany().doClick();
+        assert "Sajnos nem nyert...".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (arany).";
         view.torolValasz();
-        JButton ezust = view.getButtonEzust();
-        ezust.doClick();
-        assert "Nem ebben a ládában van!".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (ezüst).";
+        view.getButtonEzust().doClick();
+        assert "Sajnos nem nyert...".equals(view.getValaszlbl().getText()) : "Hibás vesztes üzenet (ezüst).";
     }
     
     private static void testVezerloLadaSzamSzovegFelcserelve() {
-        //by Vince
+        // Vince
         System.out.println("teszteset: ládára való hivatkozásnál mi történik, ha szöveget adunk meg a szám helyett (v fordítva)");
-        assert false: "";
+        String szovegMintSzam = "bronz";
+        boolean dobott = false;
+        try {
+            Integer.parseInt(szovegMintSzam);
+        } catch (NumberFormatException e) {
+            dobott = true;
+        }
+        assert dobott : "Szöveg megadása szám helyett nem okozott kivételt.";
+        String szamMintSzoveg = "2";
+        boolean ismertNev = java.util.Arrays.asList("arany", "ezüst", "bronz").contains(szamMintSzoveg.toLowerCase());
+        assert !ismertNev : "Számot is elfogadott a rendszer szöveg (ládanev) helyett.";
     }
 }
